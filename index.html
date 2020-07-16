@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barley's Snack</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-index.css">
+  <link rel="stylesheet" href="style-quiz.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header-container">
+      <div class="header-logo">
+        <a href="index.html"> <img src="assets/logo.png" class="logo" alt="Barley's Snack Logo"></a>
+      </div>
+      <div class="hamburger">
+        <div class="stripe1"> </div>
+        <div class="stripe2"> </div>
+        <div class="stripe3"> </div>
+      </div>
+      <div class="header-menu">
+        <a href="index.html#contact-us">Contact Us</a>
+        <a href="index.html#our-products">Our Products</a>
+        <a href="index.html#about-us">About Us</a>
+      </div>
+    </div>
+  </header>
+  <section class="top">
+    <div class="top-container">
+      <div class="intro-container"></div>
+      <div class="intro-paragraph">
+        <h1 class="intro-title">MONTHLY PROMO</h1>
+        <p class="intro-text">Get 10% off discount voucher by getting all the answers right on our quiz game. Are you curious? What are you waiting for! Play the quiz and win your voucher right away! </p>
+        <div class="intro-button">
+         <a href="index.html#quiz-section" class="top-btn">Play Quiz</a>
+       </div>
+      </div>
+    </div>
+  </section>
+  <!--ABOUT US-->
+  <section class="about-us" id="about-us" data-aos ="fade-up">
+    <div class="about-container">
+      <div class="about-content">
+        <h1>About Us</h1>
+        <p>Barley's Snack was established on June 2020. We sell premium floss or <i>Abon</i>. All products are directly manufactured in Cianjur town in West Java. The products have been shipped to many places around Indonesia e.g. Bali, Semarang, Lampung, etc. We always make sure that our customers have a full satisfaction either in purchasing or consuming our products. </p>
+      </div>
+      <div class="about-img">
+        <img src="assets/about-img.png">
+      </div>
+    </div>
+  </section>
+  <!--OUR PRODUCTS -->
+  <section class="our-products" id="our-products">
+    <h1 class="product-title">Our Products</h1>
+    <div class="product-container" data-aos ="fade-in">
+      <div class="product sapi">
+        <img src="assets/abonsapi.png">
+        <div class="product-content">
+          <h2>Abon Sapi</h2>
+          <h3>Pedas and Original</h3>
+          <p>Available in two sizes</p>
+        </div>
+      </div>
+      <div class="product ayam">
+        <img src="assets/abonayam.png">
+        <div class="product-content">
+          <h2>Abon Ayam</h2>
+          <h3>Pedas and Original</h3>
+          <p>Available in two sizes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-us" id="contact-us">
+    <div class="form">
+      <h1 class="contact-title">Contact Us</h1>
+      <p>Any questions? Any suggestions? Wanna collaborate? Please kindly contact us!</p>
+      <form>
+        <table>
+          <tr>
+            <td><label>Name:</label></td>
+            <td><input type="text" name="namebox"></td>
+          </tr>
+          <tr>
+            <td><label>E-mail:</label></td>
+            <td><input type="email" name="email"></td>
+          </tr>
+          <tr>
+            <td><label>Message:</label></td>
+            <td><textarea></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right">
+              <input type=submit value="Send">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="contact-img" style="display: none;">
+      <img src="assets/piringabon.png">
+    </div>
+  </section>
+  <!--QUIZ-->
+  <section class="quiz-section" id="quiz-section">
+    <div class="wrapper">
+      <div class="start-quiz" id="start-quiz">
+        <h1 class="quiz-title title-font">How Well Do You Know About Barley's Snack?</h1>
+        <h4 class="quiz-description">Get all the answers right and win a 10% off discount voucher! *T&C Applied</h3>
+        <div class="play-button" id="start"></div>
+      </div>
+      <div class="quiz-container" id="quiz-container" style="display: none;">
+        <div class="timer-container" id="timer-container">
+          <div class="timer" id="timer">
+            <div class="counter title-font" id="counter"> 10 </div>
+          </div>
+          <div class="gauge">
+            <div class="time-gauge-container" id="time-gauge-container"></div>
+            <div class="time-gauge" id="time-gauge"></div>
+          </div>
+        </div>
+        <div class="question title-font" id="question"><p>Question</p></div>
+        <div class="choices" id="choices">
+          <div class="choice" id="choiceA" onclick="checkAnswer('choiceA')">A</div>
+          <div class="choice" id="choiceB" onclick="checkAnswer('choiceB')">B</div>
+          <div class="choice" id="choiceC" onclick="checkAnswer('choiceC')">C</div>
+          <div class="choice" id="choiceD" onclick="checkAnswer('choiceD')">D</div>
+        </div>
+      </div>
+      <div class="result-container" id="result-container" style="display: none;"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <p>&#169 2020 Barley's Snack. Created by Gabriele Vaneysa (CE#2)</p>
+    </div>
+  </footer>
+  <script src="script-quiz.js"></script>
+  <script src="script-index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
